@@ -17,31 +17,6 @@ This project is a monorepo containing:
 - **Shared**: Monorepo with pnpm workspaces
 - **Deployment**: Docker, Nginx
 
-## Project Structure
-
-```
-beverage-order-system/
-│
-├── apps/                      # Application packages
-│   ├── client/                # Customer-facing application
-│   ├── merchant/              # Business-facing application
-│   └── api/                   # Backend API
-│
-├── packages/                  # Shared packages
-│   ├── types/                 # Shared TypeScript types
-│   ├── ui/                    # Shared UI components
-│   └── utils/                 # Shared utility functions
-│
-├── docker/                    # Docker configuration
-│   ├── docker-compose.yml     # Docker Compose configuration
-│   ├── Dockerfile.api         # Dockerfile for API
-│   ├── Dockerfile.client      # Dockerfile for client app
-│   ├── Dockerfile.merchant    # Dockerfile for merchant app
-│   └── nginx.conf             # Nginx configuration
-│
-└── docs/                      # Documentation
-```
-
 ## Getting Started
 
 ### Prerequisites
@@ -128,26 +103,6 @@ API documentation is available at `/api/docs` when the API is running.
 1. Create a new branch for your feature or bugfix
 2. Make your changes
 3. Submit a pull request
-
-## Recent Fixes
-
-The following issues were fixed:
-
-1. Created missing module files for the API:
-   - `apps/api/src/auth/auth.module.ts`
-   - `apps/api/src/menu/menu.module.ts`
-   - `apps/api/src/orders/orders.module.ts`
-   - `apps/api/src/payments/payments.module.ts`
-   - `apps/api/src/notifications/notifications.module.ts`
-
-2. Fixed TypeScript error in `apps/api/src/prisma/prisma.service.ts` by adding an index signature to the PrismaService class.
-
-3. Updated Docker Compose command to use the newer format: `docker compose` instead of `docker-compose`.
-
-4. Fixed container accessibility issue:
-   - Updated client and merchant Vite configurations to bind to all interfaces (`host: '0.0.0.0'`)
-   - Updated proxy configurations to use Docker service names instead of localhost
-   - Modified docker-compose.yml to explicitly use the development target for client and merchant containers
 
 ## License
 
