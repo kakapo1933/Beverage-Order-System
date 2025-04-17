@@ -9,17 +9,17 @@ const Settings = () => <div>Settings Page</div>;
 const NotFound = () => <div>404 - Page Not Found</div>;
 
 function App() {
-  return (
-    <Routes>
-      <Route path="/" element={<MerchantLayout />}>
-        <Route index element={<Dashboard />} />
-        <Route path="orders" element={<OrderManagement />} />
-        <Route path="menu" element={<MenuManagement />} />
-        <Route path="settings" element={<Settings />} />
-        <Route path="*" element={<NotFound />} />
-      </Route>
-    </Routes>
-  );
+	return (
+		<Routes>
+			<Route path='/' element={<MerchantLayout />}>
+				<Route index element={<Dashboard />} />
+				<Route path='orders' element={<OrderManagement />} />
+				<Route path='menu' element={<MenuManagement />} />
+				<Route path='settings' element={<Settings />} />
+				<Route path='*' element={<NotFound />} />
+			</Route>
+		</Routes>
+	);
 }
 
 export default App;

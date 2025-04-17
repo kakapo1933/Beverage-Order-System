@@ -29,17 +29,20 @@ This project is a monorepo containing:
 ### Installation
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/yourusername/beverage-order-system.git
    cd beverage-order-system
    ```
 
 2. Install dependencies:
+
    ```bash
    pnpm install
    ```
 
 3. Set up environment variables:
+
    - Create a `.env` file in the `apps/api` directory based on `.env.example`
 
 4. Generate Prisma client:
@@ -71,6 +74,7 @@ cd docker && docker compose up -d
 ```
 
 This will start the following services:
+
 - PostgreSQL database at `localhost:5432`
 - API service at `localhost:4000`
 - Client application at `localhost:3000`

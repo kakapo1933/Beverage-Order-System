@@ -59,3 +59,7 @@ postgres-data
 .temp
 .tmp
 .history
+
+#AI
+plans/
+tasks/

@@ -1,18 +1,15 @@
 {
-  "name": "@beverage-order-system/types",
-  "version": "0.1.0",
-  "private": true,
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "scripts": {
-    "build": "tsc",
-    "dev": "tsc --watch",
-    "lint": "eslint src --ext ts"
-  },
-  "devDependencies": {
-    "typescript": "^5.0.4",
-    "eslint": "^8.38.0",
-    "@typescript-eslint/eslint-plugin": "^5.57.1",
-    "@typescript-eslint/parser": "^5.57.1"
-  }
+	"name": "@beverage-order-system/types",
+	"version": "0.1.0",
+	"private": true,
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"scripts": {
+		"build": "tsc",
+		"dev": "tsc --watch",
+		"lint": "eslint src --ext ts"
+	},
+	"devDependencies": {
+		"typescript": "^5.0.4"
+	}
 }

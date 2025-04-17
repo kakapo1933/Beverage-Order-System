@@ -1,4 +1,5 @@
-import { Routes, Route } from 'react-router-dom';
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
 import MainLayout from './layouts/MainLayout';
 
 // Import pages
@@ -8,16 +9,16 @@ const Cart = () => <div>Cart Page</div>;
 const NotFound = () => <div>404 - Page Not Found</div>;
 
 function App() {
-  return (
-    <Routes>
-      <Route path="/" element={<MainLayout />}>
-        <Route index element={<Home />} />
-        <Route path="menu" element={<Menu />} />
-        <Route path="cart" element={<Cart />} />
-        <Route path="*" element={<NotFound />} />
-      </Route>
-    </Routes>
-  );
+	return (
+		<Routes>
+			<Route path='/' element={<MainLayout />}>
+				<Route index element={<Home />} />
+				<Route path='menu' element={<Menu />} />
+				<Route path='cart' element={<Cart />} />
+				<Route path='*' element={<NotFound />} />
+			</Route>
+		</Routes>
+	);
 }
 
 export default App;

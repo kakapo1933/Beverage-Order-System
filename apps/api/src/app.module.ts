@@ -8,16 +8,16 @@ import { NotificationsModule } from './notifications/notifications.module';
 import { PrismaModule } from './prisma/prisma.module';
 
 @Module({
-  imports: [
-    ConfigModule.forRoot({
-      isGlobal: true,
-    }),
-    PrismaModule,
-    AuthModule,
-    MenuModule,
-    OrdersModule,
-    PaymentsModule,
-    NotificationsModule,
-  ],
+	imports: [
+		ConfigModule.forRoot({
+			isGlobal: true
+		}),
+		PrismaModule,
+		AuthModule,
+		MenuModule,
+		OrdersModule,
+		PaymentsModule,
+		NotificationsModule
+	]
 })
 export class AppModule {}
