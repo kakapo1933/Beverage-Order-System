@@ -63,3 +63,4 @@ postgres-data
 #AI
 plans/
 tasks/
+.junie/

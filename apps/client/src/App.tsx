@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import MainLayout from './layouts/MainLayout';
+import TestPage from './pages/TestPage';
 
 // Import pages
 const Home = () => <div>Home Page</div>;
@@ -15,6 +16,7 @@ function App() {
 				<Route index element={<Home />} />
 				<Route path='menu' element={<Menu />} />
 				<Route path='cart' element={<Cart />} />
+				<Route path='test' element={<TestPage />} />
 				<Route path='*' element={<NotFound />} />
 			</Route>
 		</Routes>
