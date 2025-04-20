@@ -4,9 +4,7 @@ const MerchantLayout = () => {
 	const location = useLocation();
 
 	const isActive = (path: string) => {
-		return location.pathname === path
-			? 'bg-primary-700 text-white'
-			: 'text-primary-100 hover:bg-primary-700/50';
+		return location.pathname === path ? 'bg-primary-700 text-white' : 'text-primary-100 hover:bg-primary-700/50';
 	};
 
 	return (
@@ -19,34 +17,22 @@ const MerchantLayout = () => {
 				<nav className='p-2'>
 					<ul className='space-y-1'>
 						<li>
-							<Link
-								to='/'
-								className={`block px-4 py-2 rounded-md transition-colors ${isActive('/')}`}
-							>
+							<Link to='/' className={`block px-4 py-2 rounded-md transition-colors ${isActive('/')}`}>
 								Dashboard
 							</Link>
 						</li>
 						<li>
-							<Link
-								to='/orders'
-								className={`block px-4 py-2 rounded-md transition-colors ${isActive('/orders')}`}
-							>
+							<Link to='/orders' className={`block px-4 py-2 rounded-md transition-colors ${isActive('/orders')}`}>
 								Order Management
 							</Link>
 						</li>
 						<li>
-							<Link
-								to='/menu'
-								className={`block px-4 py-2 rounded-md transition-colors ${isActive('/menu')}`}
-							>
+							<Link to='/menu' className={`block px-4 py-2 rounded-md transition-colors ${isActive('/menu')}`}>
 								Menu Management
 							</Link>
 						</li>
 						<li>
-							<Link
-								to='/settings'
-								className={`block px-4 py-2 rounded-md transition-colors ${isActive('/settings')}`}
-							>
+							<Link to='/settings' className={`block px-4 py-2 rounded-md transition-colors ${isActive('/settings')}`}>
 								Settings
 							</Link>
 						</li>
@@ -68,9 +54,7 @@ const MerchantLayout = () => {
 							<span className='sr-only'>Notifications</span>
 							<div className='w-6 h-6 text-gray-600'>🔔</div>
 						</button>
-						<div className='w-8 h-8 rounded-full bg-primary-600 flex items-center justify-center text-white'>
-							M
-						</div>
+						<div className='w-8 h-8 rounded-full bg-primary-600 flex items-center justify-center text-white'>M</div>
 					</div>
 				</header>
 
