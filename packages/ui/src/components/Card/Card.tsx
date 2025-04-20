@@ -1,4 +1,4 @@
-import React, { forwardRef, HTMLAttributes } from 'react';
+import React, { HTMLAttributes } from 'react';
 import { cn } from '../../utils/cn';
 
 export interface CardProps extends Omit<HTMLAttributes<HTMLDivElement>, 'title'> {
@@ -6,6 +6,7 @@ export interface CardProps extends Omit<HTMLAttributes<HTMLDivElement>, 'title'>
 	showHeader?: boolean;
 	footer?: React.ReactNode;
 	showFooter?: boolean;
+	ref?: React.Ref<HTMLDivElement>;
 }
 
 /**
@@ -16,15 +17,23 @@ export interface CardProps extends Omit<HTMLAttributes<HTMLDivElement>, 'title'>
  * @param footer - Content for the card footer
  * @param showFooter - Whether to show the card footer
  * @param children - Card content
+ * @param ref - Ref for the card element
  */
-export const Card = forwardRef<HTMLDivElement, CardProps>(
-	({ className, title, showHeader = !!title, footer, showFooter = !!footer, children, ...props }, ref) => {
-		return (
-			<div className={cn('card', className)} ref={ref} {...props}>
-				{showHeader && <div className='card-header'>{title}</div>}
-				<div className='card-body'>{children}</div>
-				{showFooter && <div className='card-footer'>{footer}</div>}
-			</div>
-		);
-	}
-);
+export const Card = ({ 
+	className, 
+	title, 
+	showHeader = !!title, 
+	footer, 
+	showFooter = !!footer, 
+	children, 
+	ref,
+	...props 
+}: CardProps) => {
+	return (
+		<div className={cn('card', className)} ref={ref} {...props}>
+			{showHeader && <div className='card-header'>{title}</div>}
+			<div className='card-body'>{children}</div>
+			{showFooter && <div className='card-footer'>{footer}</div>}
+		</div>
+	);
+};
