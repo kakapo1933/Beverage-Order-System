@@ -19,15 +19,15 @@ export interface CardProps extends Omit<HTMLAttributes<HTMLDivElement>, 'title'>
  * @param children - Card content
  * @param ref - Ref for the card element
  */
-export const Card = ({ 
-	className, 
-	title, 
-	showHeader = !!title, 
-	footer, 
-	showFooter = !!footer, 
-	children, 
+export const Card = ({
+	className,
+	title,
+	showHeader = !!title,
+	footer,
+	showFooter = !!footer,
+	children,
 	ref,
-	...props 
+	...props
 }: CardProps) => {
 	return (
 		<div className={cn('card', className)} ref={ref} {...props}>

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef, RefObject } from 'react';
 
 /**
  * Configuration
@@ -28,7 +28,7 @@ const DEFAULT_OBSERVER_CONFIG: IntersectionObserverInit = {
 export const useObserver = (
 	observerCallback: IntersectionObserverCallback,
 	observerConfig: IntersectionObserverInit = DEFAULT_OBSERVER_CONFIG
-): React.RefObject<HTMLElement> => {
+): RefObject<HTMLElement | null> => {
 	const ref = useRef<HTMLElement>(null);
 	useEffect(() => {
 		if (!ref.current) return;
