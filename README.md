@@ -91,7 +91,7 @@ The system uses a microservices-inspired approach with:
 - **Prisma ORM**: Next-generation ORM for Node.js and TypeScript
 
 ### Package Management
-- **pnpm**: Fast, disk space efficient package manager with built-in monorepo support
+- **pnpm**: Fast, disk-space-efficient package manager with built-in monorepo support
 
 ### Development Tools
 - **ESLint**: For code linting
@@ -291,4 +291,4 @@ API documentation is available at `/api/docs` when the API is running. This docu
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License—see the LICENSE file for details.

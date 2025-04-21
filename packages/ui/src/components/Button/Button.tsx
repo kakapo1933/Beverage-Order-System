@@ -92,10 +92,10 @@ export const Button = ({
 	return (
 		<button
 			className={cn(
-				'btn', 
-				`btn-${variant}`, 
-				`btn-${size}`, 
-				(isLoading || isPending) && 'opacity-70 pointer-events-none', 
+				'btn',
+				`btn-${variant}`,
+				`btn-${size}`,
+				(isLoading || isPending) && 'opacity-70 pointer-events-none',
 				className
 			)}
 			disabled={disabled || isLoading}
