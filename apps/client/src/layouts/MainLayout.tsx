@@ -14,7 +14,6 @@ const MainLayout = () => {
 
 	const handleSearch = (e: React.FormEvent) => {
 		e.preventDefault();
-		console.log('Search query:', searchQuery);
 	};
 
 	return (
