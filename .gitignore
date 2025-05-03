@@ -1,19 +1,18 @@
-# Dependencies
-node_modules
-.pnp
-.pnp.js
-.pnpm-store/
+# Dependency directories
+node_modules/
+jspm_packages/
 
 # Build outputs
-dist
-build
-out
-.next
-.nuxt
-.output
+dist/
+build/
+out/
 
-# Testing
-coverage
+# Package manager logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-store/
 
 # Environment variables
 .env
@@ -22,45 +21,25 @@ coverage
 .env.test.local
 .env.production.local
 
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-
-# Editor directories and files
-.idea
-.vscode/*
-!.vscode/extensions.json
-!.vscode/settings.json
+# IDE and editor files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
 
-# Prisma
-apps/api/prisma/migrations/*
-!apps/api/prisma/migrations/.gitkeep
+# Coverage directory
+coverage/
 
-# Docker volumes
-postgres-data
+# Temporary files
+*.log
+*.tmp
+.temp/
+.tmp/
 
 # Cache
-.eslintcache
-.stylelintcache
-.turbo
+.cache/
+.parcel-cache/
 
-# Misc
-.cache
-.temp
-.tmp
-.history
-
-#AI
-plans/
-tasks/
-.junie/
+# System files
+Thumbs.db
